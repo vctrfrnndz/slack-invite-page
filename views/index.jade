@@ -5,9 +5,15 @@ block head
 
 block content
   .invite-form
-    h1= welcome
+    h1
+      a(href="https://auth0.com/") 
+        img(src="https://styleguide.auth0.com/img/logo-blue-horizontal.png", alt="Auth0" width="180")
+
+    h2 Chat with our devs on 
+      a(href="https://slack.com/" target="_blank")
+        img(class="slack-logo" src="/images/slack.svg", alt="Slack" width="65")
     form(method='post', action='/invite')
-      input(type='text', name='email', placeholder='email')
-      input(type='text', name='first', placeholder='first name')
-      input(type='text', name='last', placeholder='last name')
-      button(type='submit') add me
+      input(type='text', name='email', placeholder='Email')
+      //- input(type='text', name='first', placeholder='First name')
+      //- input(type='text', name='last', placeholder='Last name')
+      button(type='submit') Join
